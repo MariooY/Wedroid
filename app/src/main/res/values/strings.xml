@@ -1,0 +1,7 @@
+<resources>
+    <string name="module_app_app_name">WeDroid</string>
+    <string name="module_app_scan_tip">Scan QR code to log in</string>
+
+    <string name="module_app_title_activity_splash">SplashActivity</string>
+    <string name="module_app_dummy_content">Wechat\nSUCKS</string>
+</resources>

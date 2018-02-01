@@ -1,0 +1,48 @@
+ext{
+    android = [
+            compileSdkVersion   : 26,
+            miniSdkVersion       : 19,
+            targetSdkVersion    : 26,
+            versionCode         : 1,
+            versionName         : '1.0',
+            buildToolsVersions  : '26.1.0',
+
+    ]
+
+    libsVersion = [
+            supportLibVer    = "26.1.0",
+            daggerVer        = "2.11",
+            rxkotlinVer      = "2.+",
+            rxandroidVer     = "2.+",
+            retrofitVer      = "2.3.0",
+            adapterRxjavaVer = "2.3.0",
+            gsonConvertorVer = "2.3.0",
+            kotlinlibVer     = "1.2.10",
+            constraintLayoutVer = "1.0.2",
+            arouterVer       = "1.3.1",
+            arouterCompilerVer = "1.1.4",
+            arouterAnnotationVer = "1.0.4"
+
+    ]
+
+
+    deps = [
+            appcompatV7 :"com.android.support:appcompat-v7:$rootProject.supportLibVer",
+            supportV4   :"com.android.support:support-v4:$rootProject.supportLibVer",
+            constraint_layout :"com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVer",
+            dagger_compiler     :"com.google.dagger:dagger-compiler:$rootProject.daggerVer",
+            dagger_android      :"com.google.dagger:dagger-android:$rootProject.daggerVer",
+            dagger_android_support  :"com.google.dagger:dagger-android-support:$rootProject.daggerVer",
+            dagger_android_processor:"com.google.dagger:dagger-android-processor:$rootProject.daggerVer",
+            kotlin_stdlib       :"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$rootProject.kotlinlibVer",
+            rxkotlin            :"io.reactivex.rxjava2:rxkotlin:$rootProject.rxkotlinVer",
+            rxandroid           :"io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVer",
+            retrofit            :"com.squareup.retrofit2:retrofit:$rootProject.retrofitVer",
+            rxadapter           :"com.squareup.retrofit2:adapter-rxjava2:$rootProject.adapterRxjavaVer",
+            gson_convertor      :"com.squareup.retrofit2:converter-gson:$rootProject.gsonConvertorVer",
+            kotlin_gradle_plugin:"org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlinlibVer",
+            arouter             :"com.alibaba:arouter-api:$rootProject.arouterVer",
+            arouter_compiler    :"com.alibaba:arouter-compiler:$rootProject.arouterCompilerVer"
+//            arouter_annotation  :""
+    ]
+}

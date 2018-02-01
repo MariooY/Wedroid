@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.miniSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        resourcePrefix "common_module_"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    testApi 'junit:junit:4.12'
+    androidTestApi 'com.android.support.test:runner:0.5'
+    androidTestApi 'com.android.support.test.espresso:espresso-core:2.2.2'
+    api rootProject.ext.deps.kotlin_stdlib
+    api rootProject.ext.deps.appcompatV7
+    api rootProject.ext.deps.supportV4
+    api rootProject.ext.deps.rxkotlin
+    api rootProject.ext.deps.rxandroid
+    api rootProject.ext.deps.retrofit
+    api (rootProject.ext.deps.rxadapter){
+        exclude module: 'rxjava'
+        exclude module: 'okhttp'
+        exclude module: 'retrofit'
+        exclude module: 'okio'
+    }
+    api rootProject.ext.deps.gson_convertor
+    kapt rootProject.ext.deps.dagger_compiler
+    api rootProject.ext.deps.dagger_android
+    api rootProject.ext.deps.dagger_android_support
+    kapt rootProject.ext.deps.dagger_android_processor
+}
